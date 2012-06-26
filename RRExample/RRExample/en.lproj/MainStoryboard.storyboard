@@ -75,8 +75,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="4px-hp-dxa" kind="custom" identifier="showRRLoginViewController" customClass="RRNoAnimatedModalSegue" id="iGb-DA-Drm"/>
-                        <segue destination="qHF-Oe-TlZ" kind="custom" identifier="showStartViewController" customClass="RRNoAnimatedModalSegue" id="c8D-Gz-Pth"/>
+                        <segue destination="4px-hp-dxa" kind="custom" identifier="showLoginView" customClass="RRNoAnimatedModalSegue" id="iGb-DA-Drm"/>
+                        <segue destination="qHF-Oe-TlZ" kind="custom" identifier="showHomeView" customClass="RRNoAnimatedModalSegue" id="c8D-Gz-Pth"/>
                     </connections>
                 </viewController>
             </objects>
@@ -115,6 +115,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="DVF-av-ecv"/>
+        <segue reference="c8D-Gz-Pth"/>
     </inferredMetricsTieBreakers>
 </document>

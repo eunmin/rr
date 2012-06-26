@@ -7,12 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RRDelegate.h"
-#import "RRLoginViewController.h"
+#import "RRService.h"
+#import "RRSettings.h"
+#import "RRAccount.h"
+
+@protocol RRDelegate <NSObject>
+@optional
+- (void)login:(NSString *)userid withPassword:(NSString *)password;
+@end
 
 @interface RRApp : NSObject
-
-@property (nonatomic, strong) RRLoginViewController *loginViewController;
 @property (nonatomic, weak) id<RRDelegate> delegate;
-@property (nonatomic) BOOL isLoginSuccess;
+@property (nonatomic, strong) RRService *service;
+@property (nonatomic, strong) RRSettings *settings;
+@property (nonatomic, strong) RRAccount *account;
+
++ (RRApp *)sharedRRApp;
+
 @end

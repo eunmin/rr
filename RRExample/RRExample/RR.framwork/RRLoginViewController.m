@@ -14,49 +14,34 @@
 
 @implementation RRLoginViewController
 
-@synthesize delegate = _delegate;
-@synthesize isLoginSuccess = _isLoginSuccess;
 @synthesize userid = _userid;
 @synthesize password = _password;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-}
-
-- (void)viewDidUnload
-{
+- (void)viewDidUnload {
     [self setUserid:nil];
     [self setPassword:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 - (IBAction)login:(id)sender {
-    if (_delegate && [_delegate respondsToSelector:@selector(login:withPassword:)]) {
-        [_delegate login:_userid.text withPassword:_password.text];
+    if ([RRApp sharedRRApp].delegate && [[RRApp sharedRRApp].delegate respondsToSelector:@selector(login:withPassword:)]) {
+        [[RRApp sharedRRApp].delegate login:_userid.text withPassword:_password.text];
+    }
+    else {
+        [[RRApp sharedRRApp].service loginWithUserid:_userid.text withPassword:_password.text completion:^(id account, int code){
+            if (code == RR_OK) {
+                [RRApp sharedRRApp].account = account;
+                [self performSelector:@selector(showHomeView) withObject:nil afterDelay:0];
+            }
+            else {
+                [self alert:@"로그인 실패"];
+            }
+        }];
     }
 }
 
-- (void)setIsLoginSuccess:(BOOL)isLoginSuccess {
-    _isLoginSuccess = isLoginSuccess;
-    if (_isLoginSuccess) {
-        [self performSegueWithIdentifier:@"showStartViewController" sender:self];
-    }
+- (void)showHomeView {
+    [self performSegueWithIdentifier:@"showHomeView" sender:self];
 }
+
 @end

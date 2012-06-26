@@ -12,6 +12,5 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate, RRDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) RRApp *rr;
 
 @end

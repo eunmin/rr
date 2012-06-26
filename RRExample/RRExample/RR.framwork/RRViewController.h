@@ -10,4 +10,6 @@
 
 @interface RRViewController : UIViewController
 
+- (void)alert:(NSString *)message;
+
 @end

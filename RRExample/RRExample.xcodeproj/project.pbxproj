@@ -29,11 +29,19 @@
 		2E2F037615790D0500BEA856 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2F037415790D0500BEA856 /* Default@2x.png */; };
 		2E2F03791579130F00BEA856 /* RRApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F03781579130F00BEA856 /* RRApp.m */; };
 		2E2F037D15791D6000BEA856 /* RRNoAnimatedModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F037C15791D6000BEA856 /* RRNoAnimatedModalSegue.m */; };
+		2E56F1971599EE6100C43D72 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E56F1961599EE6100C43D72 /* Todo.m */; };
+		2E56F19B1599EFFD00C43D72 /* RRRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E56F19A1599EFFD00C43D72 /* RRRequest.m */; };
 		2E6AC801158F29A70040D61A /* RRService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AC800158F29A70040D61A /* RRService.m */; };
-		2E6AC805158F29C60040D61A /* RRExampleService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AC804158F29C60040D61A /* RRExampleService.m */; };
+		2E6AC805158F29C60040D61A /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AC804158F29C60040D61A /* Service.m */; };
 		2E6AC812158F2B470040D61A /* RRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AC811158F2B470040D61A /* RRTableViewController.m */; };
 		2E6AC818158F2B900040D61A /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AC817158F2B900040D61A /* ListViewController.m */; };
 		2E6AC81B158F2BA20040D61A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AC81A158F2BA20040D61A /* DetailViewController.m */; };
+		2EC06880159960A50099C6E4 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC0687F159960A50099C6E4 /* Settings.m */; };
+		2EC06884159960BC0099C6E4 /* RRSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC06883159960BC0099C6E4 /* RRSettings.m */; };
+		2EC0688C1599619D0099C6E4 /* CredentailUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC0688B1599619D0099C6E4 /* CredentailUtils.m */; };
+		2EFD36021599806B00C993C1 /* RRAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFD36011599806B00C993C1 /* RRAccount.m */; };
+		2EFD36051599832A00C993C1 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFD36041599832A00C993C1 /* Account.m */; };
+		2EFD360715998BF300C993C1 /* RR.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EFD360615998BF300C993C1 /* RR.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,19 +88,33 @@
 		2E2F037415790D0500BEA856 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2E2F03771579130F00BEA856 /* RRApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RRApp.h; path = RR.framwork/RRApp.h; sourceTree = "<group>"; };
 		2E2F03781579130F00BEA856 /* RRApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RRApp.m; path = RR.framwork/RRApp.m; sourceTree = "<group>"; };
-		2E2F037A157913C200BEA856 /* RRDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RRDelegate.h; path = RR.framwork/RRDelegate.h; sourceTree = "<group>"; };
 		2E2F037B15791D6000BEA856 /* RRNoAnimatedModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RRNoAnimatedModalSegue.h; path = RR.framwork/RRNoAnimatedModalSegue.h; sourceTree = "<group>"; };
 		2E2F037C15791D6000BEA856 /* RRNoAnimatedModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RRNoAnimatedModalSegue.m; path = RR.framwork/RRNoAnimatedModalSegue.m; sourceTree = "<group>"; };
+		2E56F1951599EE6100C43D72 /* Todo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
+		2E56F1961599EE6100C43D72 /* Todo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
+		2E56F1991599EFFD00C43D72 /* RRRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RRRequest.h; path = RR.framwork/RRRequest.h; sourceTree = "<group>"; };
+		2E56F19A1599EFFD00C43D72 /* RRRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RRRequest.m; path = RR.framwork/RRRequest.m; sourceTree = "<group>"; };
 		2E6AC7FF158F29A70040D61A /* RRService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RRService.h; path = RR.framwork/RRService.h; sourceTree = "<group>"; };
 		2E6AC800158F29A70040D61A /* RRService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RRService.m; path = RR.framwork/RRService.m; sourceTree = "<group>"; };
-		2E6AC803158F29C60040D61A /* RRExampleService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRExampleService.h; sourceTree = "<group>"; };
-		2E6AC804158F29C60040D61A /* RRExampleService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRExampleService.m; sourceTree = "<group>"; };
+		2E6AC803158F29C60040D61A /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
+		2E6AC804158F29C60040D61A /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
 		2E6AC810158F2B460040D61A /* RRTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RRTableViewController.h; path = RR.framwork/RRTableViewController.h; sourceTree = "<group>"; };
 		2E6AC811158F2B470040D61A /* RRTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RRTableViewController.m; path = RR.framwork/RRTableViewController.m; sourceTree = "<group>"; };
 		2E6AC816158F2B900040D61A /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		2E6AC817158F2B900040D61A /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		2E6AC819158F2BA10040D61A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		2E6AC81A158F2BA20040D61A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		2EC0687E159960A50099C6E4 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		2EC0687F159960A50099C6E4 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		2EC06882159960BC0099C6E4 /* RRSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RRSettings.h; path = RR.framwork/RRSettings.h; sourceTree = "<group>"; };
+		2EC06883159960BC0099C6E4 /* RRSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RRSettings.m; path = RR.framwork/RRSettings.m; sourceTree = "<group>"; };
+		2EC0688A1599619D0099C6E4 /* CredentailUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CredentailUtils.h; path = RR.framwork/CredentailUtils.h; sourceTree = "<group>"; };
+		2EC0688B1599619D0099C6E4 /* CredentailUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CredentailUtils.m; path = RR.framwork/CredentailUtils.m; sourceTree = "<group>"; };
+		2EFD36001599806B00C993C1 /* RRAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RRAccount.h; path = RR.framwork/RRAccount.h; sourceTree = "<group>"; };
+		2EFD36011599806B00C993C1 /* RRAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RRAccount.m; path = RR.framwork/RRAccount.m; sourceTree = "<group>"; };
+		2EFD36031599832A00C993C1 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		2EFD36041599832A00C993C1 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		2EFD360615998BF300C993C1 /* RR.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RR.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +163,7 @@
 		2E2F032C157908D700BEA856 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E2F036215790A6700BEA856 /* RR.framework */,
 				2E2F032D157908D700BEA856 /* UIKit.framework */,
 				2E2F032F157908D700BEA856 /* Foundation.framework */,
 				2E2F0331157908D700BEA856 /* CoreGraphics.framework */,
@@ -156,15 +179,10 @@
 				2E6AC81D158F2BBC0040D61A /* Services */,
 				2E6AC81C158F2BB10040D61A /* ViewControllers */,
 				2E2F037215790CFC00BEA856 /* Images */,
-				2E2F036215790A6700BEA856 /* RR.framework */,
 				2E2F033C157908D700BEA856 /* AppDelegate.h */,
 				2E2F033D157908D700BEA856 /* AppDelegate.m */,
 				2E2F033F157908D700BEA856 /* MainStoryboard.storyboard */,
-				2E2F0342157908D700BEA856 /* ViewController.h */,
-				2E2F0343157908D700BEA856 /* ViewController.m */,
 				2E2F0334157908D700BEA856 /* Supporting Files */,
-				2E6AC816158F2B900040D61A /* ListViewController.h */,
-				2E6AC817158F2B900040D61A /* ListViewController.m */,
 			);
 			path = RRExample;
 			sourceTree = "<group>";
@@ -176,6 +194,7 @@
 				2E2F0336157908D700BEA856 /* InfoPlist.strings */,
 				2E2F0339157908D700BEA856 /* main.m */,
 				2E2F033B157908D700BEA856 /* RRExample-Prefix.pch */,
+				2EFD360615998BF300C993C1 /* RR.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -202,27 +221,20 @@
 		2E2F036215790A6700BEA856 /* RR.framework */ = {
 			isa = PBXGroup;
 			children = (
-				2E2F036315790A9000BEA856 /* RRModel.h */,
-				2E2F036415790A9000BEA856 /* RRModel.m */,
-				2E2F036615790AD400BEA856 /* RRViewController.h */,
-				2E2F036715790AD400BEA856 /* RRViewController.m */,
-				2E2F036915790B0E00BEA856 /* RRFormViewController.h */,
-				2E2F036A15790B0E00BEA856 /* RRFormViewController.m */,
-				2E2F036C15790B2200BEA856 /* RRLoginViewController.h */,
-				2E2F036D15790B2200BEA856 /* RRLoginViewController.m */,
-				2E2F036F15790B4900BEA856 /* RRLaunchViewController.h */,
-				2E2F037015790B4900BEA856 /* RRLaunchViewController.m */,
+				2EC068891599613A0099C6E4 /* Services */,
+				2EC06888159961360099C6E4 /* Models */,
+				2EC06887159960E80099C6E4 /* Utilities */,
+				2EC06886159960D50099C6E4 /* Dependencies */,
+				2EC06885159960C70099C6E4 /* ViewControllers */,
 				2E2F03771579130F00BEA856 /* RRApp.h */,
 				2E2F03781579130F00BEA856 /* RRApp.m */,
-				2E2F037A157913C200BEA856 /* RRDelegate.h */,
 				2E2F037B15791D6000BEA856 /* RRNoAnimatedModalSegue.h */,
 				2E2F037C15791D6000BEA856 /* RRNoAnimatedModalSegue.m */,
-				2E6AC7FF158F29A70040D61A /* RRService.h */,
-				2E6AC800158F29A70040D61A /* RRService.m */,
-				2E6AC810158F2B460040D61A /* RRTableViewController.h */,
-				2E6AC811158F2B470040D61A /* RRTableViewController.m */,
+				2E56F1991599EFFD00C43D72 /* RRRequest.h */,
+				2E56F19A1599EFFD00C43D72 /* RRRequest.m */,
 			);
 			name = RR.framework;
+			path = RRExample;
 			sourceTree = "<group>";
 		};
 		2E2F037215790CFC00BEA856 /* Images */ = {
@@ -237,8 +249,12 @@
 		2E6AC81C158F2BB10040D61A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2E2F0342157908D700BEA856 /* ViewController.h */,
+				2E2F0343157908D700BEA856 /* ViewController.m */,
 				2E6AC819158F2BA10040D61A /* DetailViewController.h */,
 				2E6AC81A158F2BA20040D61A /* DetailViewController.m */,
+				2E6AC816158F2B900040D61A /* ListViewController.h */,
+				2E6AC817158F2B900040D61A /* ListViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -246,8 +262,10 @@
 		2E6AC81D158F2BBC0040D61A /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				2E6AC803158F29C60040D61A /* RRExampleService.h */,
-				2E6AC804158F29C60040D61A /* RRExampleService.m */,
+				2EC0687E159960A50099C6E4 /* Settings.h */,
+				2EC0687F159960A50099C6E4 /* Settings.m */,
+				2E6AC803158F29C60040D61A /* Service.h */,
+				2E6AC804158F29C60040D61A /* Service.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -255,8 +273,67 @@
 		2E6AC81E158F2BC40040D61A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2EFD36031599832A00C993C1 /* Account.h */,
+				2EFD36041599832A00C993C1 /* Account.m */,
+				2E56F1951599EE6100C43D72 /* Todo.h */,
+				2E56F1961599EE6100C43D72 /* Todo.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		2EC06885159960C70099C6E4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2E2F036615790AD400BEA856 /* RRViewController.h */,
+				2E2F036715790AD400BEA856 /* RRViewController.m */,
+				2E2F036915790B0E00BEA856 /* RRFormViewController.h */,
+				2E2F036A15790B0E00BEA856 /* RRFormViewController.m */,
+				2E2F036C15790B2200BEA856 /* RRLoginViewController.h */,
+				2E2F036D15790B2200BEA856 /* RRLoginViewController.m */,
+				2E2F036F15790B4900BEA856 /* RRLaunchViewController.h */,
+				2E2F037015790B4900BEA856 /* RRLaunchViewController.m */,
+				2E6AC810158F2B460040D61A /* RRTableViewController.h */,
+				2E6AC811158F2B470040D61A /* RRTableViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2EC06886159960D50099C6E4 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		2EC06887159960E80099C6E4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2EC0688A1599619D0099C6E4 /* CredentailUtils.h */,
+				2EC0688B1599619D0099C6E4 /* CredentailUtils.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		2EC06888159961360099C6E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E2F036315790A9000BEA856 /* RRModel.h */,
+				2E2F036415790A9000BEA856 /* RRModel.m */,
+				2EFD36001599806B00C993C1 /* RRAccount.h */,
+				2EFD36011599806B00C993C1 /* RRAccount.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2EC068891599613A0099C6E4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2E6AC7FF158F29A70040D61A /* RRService.h */,
+				2E6AC800158F29A70040D61A /* RRService.m */,
+				2EC06882159960BC0099C6E4 /* RRSettings.h */,
+				2EC06883159960BC0099C6E4 /* RRSettings.m */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +410,7 @@
 				2E2F0341157908D700BEA856 /* MainStoryboard.storyboard in Resources */,
 				2E2F037515790D0500BEA856 /* Default.png in Resources */,
 				2E2F037615790D0500BEA856 /* Default@2x.png in Resources */,
+				2EFD360715998BF300C993C1 /* RR.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,10 +456,17 @@
 				2E2F03791579130F00BEA856 /* RRApp.m in Sources */,
 				2E2F037D15791D6000BEA856 /* RRNoAnimatedModalSegue.m in Sources */,
 				2E6AC801158F29A70040D61A /* RRService.m in Sources */,
-				2E6AC805158F29C60040D61A /* RRExampleService.m in Sources */,
+				2E6AC805158F29C60040D61A /* Service.m in Sources */,
 				2E6AC812158F2B470040D61A /* RRTableViewController.m in Sources */,
 				2E6AC818158F2B900040D61A /* ListViewController.m in Sources */,
 				2E6AC81B158F2BA20040D61A /* DetailViewController.m in Sources */,
+				2EC06880159960A50099C6E4 /* Settings.m in Sources */,
+				2EC06884159960BC0099C6E4 /* RRSettings.m in Sources */,
+				2EC0688C1599619D0099C6E4 /* CredentailUtils.m in Sources */,
+				2EFD36021599806B00C993C1 /* RRAccount.m in Sources */,
+				2EFD36051599832A00C993C1 /* Account.m in Sources */,
+				2E56F1971599EE6100C43D72 /* Todo.m in Sources */,
+				2E56F19B1599EFFD00C43D72 /* RRRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

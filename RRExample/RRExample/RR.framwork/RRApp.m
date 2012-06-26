@@ -8,21 +8,39 @@
 
 #import "RRApp.h"
 
+static RRApp *sharedRRApp;
+static NSString *propertyFileName = @"RR.plist";
+
+@interface RRApp ()
+@property (nonatomic, strong) NSDictionary *properties;
+@end
+
 @implementation RRApp
 
-@synthesize loginViewController = _loginViewController;
+@synthesize properties = _properties;
+
 @synthesize delegate = _delegate;
+@synthesize service = _service;
+@synthesize settings = _settings;
+@synthesize account = _account;
 
-- (void)setIsLoginSuccess:(BOOL)isLoginSuccess {
-    _loginViewController.isLoginSuccess = isLoginSuccess;
++ (RRApp *)sharedRRApp {
+    if (!sharedRRApp) {
+        sharedRRApp = [[RRApp alloc] init];
+        NSString *resourcePath = [[NSBundle mainBundle] resourcePath]; 
+        NSString *path = [resourcePath stringByAppendingPathComponent:propertyFileName];
+        if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+
+            sharedRRApp.properties = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
+            
+            NSString *serviceClassName = [sharedRRApp.properties valueForKey:@"ServiceClassName"];
+            NSString *settingsClassName = [sharedRRApp.properties valueForKey:@"SettingsClassName"];
+
+            sharedRRApp.service = [[NSClassFromString(serviceClassName) alloc] init];
+            sharedRRApp.settings = [[NSClassFromString(settingsClassName) alloc] init];
+        }
+    }
+    return sharedRRApp;
 }
 
-- (BOOL)isLoginSuccess {
-    return _loginViewController.isLoginSuccess;
-}
-
-- (void)setLoginViewController:(RRLoginViewController *)loginViewController {
-    _loginViewController = loginViewController;
-    _loginViewController.delegate = _delegate;
-}
 @end

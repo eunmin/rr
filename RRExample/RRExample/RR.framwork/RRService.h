@@ -7,7 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RRRequest.h"
 
-@interface RRService : NSObject
+#define RR_OK 200
+
+typedef typedef void (^CompletionBlock)(id, int);
+
+@protocol RRService
+    - (RRRequest *)loginWithUserid:(NSString *)userid withPassword:(NSString *)password completion:(CompletionBlock)block;
+@end
+
+@interface RRService : NSObject <RRService>
+
+@property (nonatomic, strong) NSString *host;
+
+- (RRRequest *)loginWithUserid:(NSString *)userid withPassword:(NSString *)password completion:(CompletionBlock)block;
 
 @end

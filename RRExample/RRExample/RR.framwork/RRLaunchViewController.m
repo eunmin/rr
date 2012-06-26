@@ -8,29 +8,16 @@
 
 #import "RRLaunchViewController.h"
 #import "RRLoginViewController.h"
+#import "RRApp.h"
+#import "CredentailUtils.h"
+#import "RRAccount.h"
+#import "RRService.h"
 
 @interface RRLaunchViewController ()
 
 @end
 
 @implementation RRLaunchViewController
-
-@synthesize rr = _rr;
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        self.rr = [[RRApp alloc] init];
-    }
-    return self;
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-    }
-    return self;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,18 +28,38 @@
     [super viewDidUnload];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+- (void)viewWillAppear:(BOOL)animated {
+    NSString *userid = [RRApp sharedRRApp].settings.autoLoginUserid;
+    
+    if (userid && [RRApp sharedRRApp].settings.isAutoLogin) {
+        NSString *password = [CredentailUtils passwordByUserid:userid withHost:[RRApp sharedRRApp].service.host];
+
+        [[RRApp sharedRRApp].service loginWithUserid:userid withPassword:password completion:^(id account, int code){
+            if (code == RR_OK) {
+                [RRApp sharedRRApp].account = account;
+                [self performSelector:@selector(showHomeView) withObject:nil afterDelay:0];
+            }
+            else {
+                [self performSelector:@selector(showLoginView) withObject:nil afterDelay:0];
+            }
+        }];
+    }
+    else {
+        [self performSelector:@selector(showLoginView) withObject:nil afterDelay:0];
+    }
+    [super viewWillAppear:animated];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showRRLoginViewController"]) {
-        _rr.loginViewController = segue.destinationViewController;
-    }
+
 }
 
 - (void)showLoginView {
-    [self performSegueWithIdentifier:@"showRRLoginViewController" sender:self];
+    [self performSegueWithIdentifier:@"showLoginView" sender:self];
+}
+
+- (void)showHomeView {
+    [self performSegueWithIdentifier:@"showHomeView" sender:self];
 }
 
 @end

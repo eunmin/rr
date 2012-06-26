@@ -7,17 +7,14 @@
 //
 
 #import "AppDelegate.h"
-#import "RRLaunchViewController.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize rr = _rr;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.rr = ((RRLaunchViewController *)self.window.rootViewController).rr;
-    _rr.delegate = self;
+    [RRApp sharedRRApp].delegate = self;
     
     return YES;
 }

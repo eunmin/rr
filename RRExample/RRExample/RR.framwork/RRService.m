@@ -10,4 +10,10 @@
 
 @implementation RRService
 
+@synthesize host = _host;
+
+- (RRRequest *)loginWithUserid:(NSString *)userid withPassword:(NSString *)password completion:(CompletionBlock)block {
+    return nil;
+}
+
 @end

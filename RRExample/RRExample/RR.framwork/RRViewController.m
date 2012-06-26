@@ -40,4 +40,8 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void)alert:(NSString *)message {
+    NSLog(@"alert : %@", message);
+}
+
 @end

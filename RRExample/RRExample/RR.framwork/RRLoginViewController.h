@@ -6,13 +6,10 @@
 //  Copyright (c) 2012년 __MyCompanyName__. All rights reserved.
 //
 
-#import "RRFormViewController.h"
-#import "RRDelegate.h"
+#import "RRApp.h"
+#import "RRViewController.h"
 
-@interface RRLoginViewController : RRFormViewController
-
-@property (nonatomic, weak) IBOutlet id<RRDelegate> delegate;
-@property (nonatomic) BOOL isLoginSuccess;
+@interface RRLoginViewController : RRViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *userid;
 @property (weak, nonatomic) IBOutlet UITextField *password;

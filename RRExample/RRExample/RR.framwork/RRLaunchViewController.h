@@ -11,6 +11,4 @@
 
 @interface RRLaunchViewController : RRViewController
 
-@property (nonatomic, strong) RRApp *rr;
-
 @end
